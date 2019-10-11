@@ -12,7 +12,7 @@
 <table cellpadding="10" cellspacing="0">
 	<tr>
 		<td valign="top">
-			<b>Fields:</b>
+			<b>{'common.fields'|devblocks_translate}:</b>
 			
 			<ul class="bubbles sortable" style="display:block;padding:0;">
 				{foreach from=$tokens item=token}
@@ -51,15 +51,15 @@
 </table>
 
 <div style="margin-bottom:10px;">
-	<b>Format dates as:</b>
+	<b>{'common.export.date_format'|devblocks_translate}</b>
 	<div style="margin-left:10px;">
-		<label><input type="radio" name="format_timestamps" value="1" checked="checked"> Text</label>
-		<label><input type="radio" name="format_timestamps" value="0"> Unix Timestamps</label>
+		<label><input type="radio" name="format_timestamps" value="1" checked="checked"> {'common.text'|devblocks_translate|capitalize}</label>
+		<label><input type="radio" name="format_timestamps" value="0"> {'common.unix_timestamp'|devblocks_translate|capitalize}</label>
 	</div>
 </div>
 
 <div style="margin-bottom:10px;">
-	<b>Export list as:</b>
+	<b>{'common.export.list_format'|devblocks_translate}</b>
 	<div style="margin-left:10px;">
 		<select name="export_as">
 			<option value="csv" selected="selected">Comma-separated values (.csv)</option>
@@ -70,7 +70,7 @@
 </div>
 
 <button type="button" class="submit"><span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,180,0);"></span> {'common.export'|devblocks_translate|capitalize}</button>
-<button type="button" onclick="$('#{$view_id}_tips').html('').hide();" style="cancel"><span class="glyphicons glyphicons-circle-remove" style="color:rgb(200,0,0);"></span> Cancel</button>
+<button type="button" onclick="$('#{$view_id}_tips').html('').hide();" style="cancel"><span class="glyphicons glyphicons-circle-remove" style="color:rgb(200,0,0);"></span> {'common.cancel'|devblocks_translate|capitalize}</button>
 
 </div>
 

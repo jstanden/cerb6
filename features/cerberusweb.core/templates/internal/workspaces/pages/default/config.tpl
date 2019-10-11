@@ -1,7 +1,7 @@
 <div id="page{$page->id}Config" style="margin-top:10px;">
 	<fieldset id="page{$widget->id}Columns" class="peek">
 		<legend>
-			Display tabs as:
+			{'common.workspace.page.config.tab_type'|devblocks_translate|capitalize}:
 		</legend>
 		
 		<label>

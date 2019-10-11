@@ -1,3 +1,0 @@
-<div>
-	[[ example settings ]]
-</div>

@@ -280,6 +280,11 @@
 				<seg>add</seg>
 			</tuv>
 		</tu>
+		<tu tuid="common.add_fieldset">
+			<tuv xml:lang="en_US">
+				<seg>add fieldset</seg>
+			</tuv>
+		</tu>
 		<tu tuid="common.all">
 			<tuv xml:lang="en_US">
 				<seg>all</seg>
@@ -328,6 +333,11 @@
 		<tu tuid="common.assigned">
 			<tuv xml:lang="en_US">
 				<seg>Assigned</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.assignments">
+			<tuv xml:lang="en_US">
+				<seg>Assignments</seg>
 			</tuv>
 		</tu>
 		<tu tuid="common.at">
@@ -1195,6 +1205,16 @@
 				<seg>export data</seg>
 			</tuv>
 		</tu>
+		<tu tuid="common.export.date_format">
+			<tuv xml:lang="en_US">
+				<seg>Format dates as:</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.export.list_format">
+			<tuv xml:lang="en_US">
+				<seg>Export list as:</seg>
+			</tuv>
+		</tu>
 		<tu tuid="common.export.widget">
 			<tuv xml:lang="en_US">
 				<seg>export widget</seg>
@@ -1243,6 +1263,11 @@
 		<tu tuid="common.file_bundles">
 			<tuv xml:lang="en_US">
 				<seg>File Bundles</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.file_bundles.include">
+			<tuv xml:lang="en_US">
+				<seg>Include files from these bundles</seg>
 			</tuv>
 		</tu>
 		<tu tuid="common.filter">
@@ -2719,6 +2744,11 @@
 				<seg>Undelete</seg>
 			</tuv>
 		</tu>
+		<tu tuid="common.unix_timestamp">
+			<tuv xml:lang="en_US">
+				<seg>Unix Timestamps</seg>
+			</tuv>
+		</tu>
 		<tu tuid="common.unknown">
 			<tuv xml:lang="en_US">
 				<seg>unknown</seg>
@@ -2924,6 +2954,26 @@
 				<seg>workspace pages</seg>
 			</tuv>
 		</tu>
+		<tu tuid="common.workspace.page.export">
+			<tuv xml:lang="en_US">
+				<seg>export page</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.workspace.page.edit">
+			<tuv xml:lang="en_US">
+				<seg>edit page</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.workspace.page.owner">
+			<tuv xml:lang="en_US">
+				<seg>managed by</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.workspace.page.config.tab_type">
+			<tuv xml:lang="en_US">
+				<seg>display tabs as</seg>
+			</tuv>
+		</tu>
 		<tu tuid="common.workspace.tab">
 			<tuv xml:lang="en_US">
 				<seg>workspace tab</seg>
@@ -2932,6 +2982,16 @@
 		<tu tuid="common.workspace.tabs">
 			<tuv xml:lang="en_US">
 				<seg>workspace tabs</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.workspace.tab.export">
+			<tuv xml:lang="en_US">
+				<seg>export tab</seg>
+			</tuv>
+		</tu>
+		<tu tuid="common.workspace.tab.edit">
+			<tuv xml:lang="en_US">
+				<seg>edit tab</seg>
 			</tuv>
 		</tu>
 		<tu tuid="common.workspace.widget">
@@ -2987,6 +3047,32 @@
 		<tu tuid="common.zoom.out">
 			<tuv xml:lang="en_US">
 				<seg>zoom out</seg>
+			</tuv>
+		</tu>
+
+		<!-- Worklist -->
+
+		<tu tuid="worklist.compose.sender">
+			<tuv xml:lang="en_US">
+				<seg>When composing mail from this worklist, set the sender to</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="worklist.hide_watcher">
+			<tuv xml:lang="en_US">
+				<seg>Hide watchers column</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="worklist.prevent_changing_order">
+			<tuv xml:lang="en_US">
+				<seg>Prevent workers from changing the sort column</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid="worklist.restrict_result">
+			<tuv xml:lang="en_US">
+				<seg>Restrict the worklist results using this quick search</seg>
 			</tuv>
 		</tu>
 
@@ -3843,6 +3929,7 @@
 			</tuv>
 		</tu>
 
+
 		<!-- Home -->
 		
 		<tu tuid="home.my_notifications.view.title">
@@ -4086,6 +4173,66 @@
 
 		<!-- Mail -->
 		
+		<tu tuid="mail.compose.create_without_recipients">
+			<tuv xml:lang="en_US">
+				<seg>Create a ticket without recipients</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.info.no_recipient.solution">
+			<tuv xml:lang="en_US">
+				<seg>If this isn't what you meant to do, add a recipient in the To: field above.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.info.no_recipient.title">
+			<tuv xml:lang="en_US">
+				<seg>You haven't specified any recipients.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.info.no_recipient.warning">
+			<tuv xml:lang="en_US">
+				<seg>A new ticket will be created without sending any email. This is normal if you're working on an issue and you plan to add an email address later (e.g. phone call).</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.options_dont_send">
+			<tuv xml:lang="en_US">
+				<seg>Start a new conversation without sending a copy of this message to the recipients</seg> 
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.org_name.placeholder">
+			<tuv xml:lang="en_US">
+				<seg>(optional) Link this ticket to an organization for suggested recipients</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.to.placeholder">
+			<tuv xml:lang="en_US">
+				<seg>These recipients will automatically be included in all future correspondence</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.cc.placeholder">
+			<tuv xml:lang="en_US">
+				<seg>These recipients will publicly receive a one-time copy of this message</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.bcc.placeholder">
+			<tuv xml:lang="en_US">
+				<seg>These recipients will secretly receive a one-time copy of this message</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.snippet_insert.placeholder">
+			<tuv xml:lang="en_US">
+				<seg>(Ctrl-Shift-I)</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.view.switch_markdown">
+			<tuv xml:lang="en_US">
+				<seg>Switch to Markdown</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.compose.view.switch_plaintext">
+			<tuv xml:lang="en_US">
+				<seg>Switch to Plaintext</seg>
+			</tuv>
+		</tu>
 		<tu tuid="mail.create.on_behalf">
 			<tuv xml:lang="en_US">
 				<seg>#### This message was created by %s on your behalf.</seg>
@@ -4184,6 +4331,16 @@
 		<tu tuid="mail.received">
 			<tuv xml:lang="en_US">
 				<seg>Received</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.resume">
+			<tuv xml:lang="en_US">
+				<seg>Resume</seg>
+			</tuv>
+		</tu>
+		<tu tuid="mail.save_draft">
+			<tuv xml:lang="en_US">
+				<seg>Save Draft</seg>
 			</tuv>
 		</tu>
 		<tu tuid="mail.saved">

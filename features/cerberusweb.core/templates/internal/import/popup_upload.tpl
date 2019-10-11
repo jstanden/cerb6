@@ -6,7 +6,7 @@
 <input type="hidden" name="_csrf_token" value="{$session.csrf_token}">
 
 <fieldset>
-	<legend>Upload File</legend>
+	<legend>{'common.upload.file'|devblocks_translate}</legend>
 	<b>{'common.import.upload_csv'|devblocks_translate}:</b> {'common.import.upload_csv.tip'|devblocks_translate}<br>
 	<input type="file" name="csv_file">
 </fieldset>

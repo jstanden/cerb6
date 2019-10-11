@@ -147,7 +147,7 @@ markitupParsedownSettings.previewAutoRefresh = false;
 delete markitupParsedownSettings.previewInWindow;
 
 markitupParsedownSettings.markupSet.unshift(
-	{ name:'Switch to Plaintext', openWith: markitupBroadcastFunctions.switchToPlaintext, className:'plaintext' },
+	{ name:'{'mail.compose.view.switch_plaintext'|devblocks_translate}', openWith: markitupBroadcastFunctions.switchToPlaintext, className:'plaintext' },
 	{ separator:' ' }
 );
 

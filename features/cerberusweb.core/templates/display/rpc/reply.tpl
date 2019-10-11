@@ -63,7 +63,7 @@
 				<tr>
 					<td width="1%" nowrap="nowrap" align="right" valign="middle"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query=""><b>{'message.header.to'|devblocks_translate|capitalize}</b></a>:&nbsp;</td>
 					<td width="99%" align="left">
-						<input type="text" size="45" name="to" value="{$to}" placeholder="{if $is_forward}These recipients will receive this forwarded message{else}These recipients will automatically be included in all future correspondence as participants{/if}" class="required" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
+						<input type="text" size="45" name="to" value="{$to}" placeholder="{if $is_forward}These recipients will receive this forwarded message{else}{'mail.compose.to.placeholder'|devblocks_translate}{/if}" class="required" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
 						{if !$is_forward}
 							{if !empty($suggested_recipients)}
 								<div id="reply{$message->id}_suggested">
@@ -83,14 +83,14 @@
 				<tr>
 					<td width="1%" nowrap="nowrap" align="right" valign="middle"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query="">{'message.header.cc'|devblocks_translate|capitalize}</a>:&nbsp;</td>
 					<td width="99%" align="left">
-						<input type="text" size="45" name="cc" value="{$cc}" placeholder="These recipients will publicly receive a one-time copy of this message" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
+						<input type="text" size="45" name="cc" value="{$cc}" placeholder="{'mail.compose.cc.placeholder'|devblocks_translate}" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
 					</td>
 				</tr>
 				
 				<tr>
 					<td width="1%" nowrap="nowrap" align="right" valign="middle"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query="">{'message.header.bcc'|devblocks_translate|capitalize}</a>:&nbsp;</td>
 					<td width="99%" align="left">
-						<input type="text" size="45" name="bcc" value="{$bcc}" placeholder="These recipients will secretly receive a one-time copy of this message" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
+						<input type="text" size="45" name="bcc" value="{$bcc}" placeholder="{'mail.compose.bcc.placeholder'|devblocks_translate}" style="width:100%;border:1px solid rgb(180,180,180);padding:2px;">
 					</td>
 				</tr>
 				
@@ -107,13 +107,13 @@
 			
 			<div>
 				<fieldset style="display:inline-block;margin-bottom:0;">
-					<legend>Actions</legend>
+					<legend>{'common.actions'|devblocks_translate|capitalize}</legend>
 					
 					<div id="replyInteractions{$message->id}" style="display:inline-block;">
 					{include file="devblocks:cerberusweb.core::events/interaction/interactions_menu.tpl"}
 					</div>
 					
-					<button name="saveDraft" type="button"><span class="glyphicons glyphicons-circle-ok"></span> Save Draft</button>
+					<button name="saveDraft" type="button"><span class="glyphicons glyphicons-circle-ok"></span> {'mail.save_draft'|devblocks_translate|capitalize}</button>
 					
 					{* Plugin Toolbar *}
 					{if !empty($reply_toolbaritems)}
@@ -618,7 +618,7 @@ $(function() {
 		};
 		
 		markitupPlaintextSettings.markupSet.unshift(
-			{ name:'Switch to Markdown', openWith: markitupReplyFunctions.switchToMarkdown, key: 'H', className:'parsedown' },
+			{ name:'{'mail.compose.view.switch_markdown'|devblocks_translate}', openWith: markitupReplyFunctions.switchToMarkdown, key: 'H', className:'parsedown' },
 			{ separator:' ' },
 			{ name:'Preview', key: 'P', call:'preview', className:"preview" }
 		);
@@ -659,7 +659,7 @@ $(function() {
 		};
 		
 		markitupParsedownSettings.markupSet.unshift(
-			{ name:'Switch to Plaintext', openWith: markitupReplyFunctions.switchToPlaintext, key: 'H', className:'plaintext' },
+			{ name:'{'mail.compose.view.switch_plaintext'|devblocks_translate}', openWith: markitupReplyFunctions.switchToPlaintext, key: 'H', className:'plaintext' },
 			{ separator:' ' }
 		);
 		

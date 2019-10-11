@@ -16,7 +16,7 @@ var $popup = genericAjaxPopupFind('#frmWorkspacePageExport');
 $popup.one('popup_open', function(event,ui) {
 	var $this = $(this);
 	
-	$this.dialog('option','title',"{"Export Page: {$page->name|escape:'javascript' nofilter}"}");
+	$this.dialog('option','title',"{"{'common.workspace.page.export'|devblocks_translate|capitalize}: {$page->name|escape:'javascript' nofilter}"}");
 	
 	var $frm = $(this).find('form');
 	

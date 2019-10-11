@@ -42,7 +42,7 @@
 		{if !$draft->is_queued}
 			<div style="margin-top:10px;">
 			{if $draft->worker_id==$active_worker->id && isset($draft->params.in_reply_message_id)}
-				<button type="button" class="cerb-button-resume"><span class="glyphicons glyphicons-share"></span> {'Resume'|devblocks_translate|capitalize}</button>
+				<button type="button" class="cerb-button-resume"><span class="glyphicons glyphicons-share"></span> {'mail.resume'|devblocks_translate|capitalize}</button>
 			{/if}
 			
 			{if $draft->ticket_id}

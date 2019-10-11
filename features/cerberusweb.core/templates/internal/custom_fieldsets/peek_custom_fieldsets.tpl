@@ -15,7 +15,7 @@
 {if !empty($custom_fieldsets_available)}
 {$btn_cfield_group_domid = "cfield_sets_{uniqid()}"}
 <div style="margin-left:10px;margin-bottom:10px;">
-	<button type="button" id="{$btn_cfield_group_domid}" class="action">Add Fieldset &#x25be;</button>
+	<button type="button" id="{$btn_cfield_group_domid}" class="action">{'common.add_fieldset'|devblocks_translate|capitalize} &#x25be;</button>
 	<ul class="cerb-popupmenu" style="border:0;">
 		<li style="background:none;">
 			<input type="text" size="32" class="input_search filter">

@@ -1,1 +1,0 @@
-<a href="javascript:;" onclick="alert('You clicked me!');">Custom Item</a>

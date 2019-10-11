@@ -13,7 +13,7 @@
 	
 	<table cellpadding="0" cellspacing="2" border="0" width="98%">
 		<tr>
-			<td width="0%" nowrap="nowrap" align="right"><b>From:</b>&nbsp;</td>
+			<td width="0%" nowrap="nowrap" align="right"><b>{'message.header.from'|devblocks_translate|capitalize}:</b>&nbsp;</td>
 			<td width="100%">
 				<select name="group_id">
 					{foreach from=$groups item=group key=group_id}
@@ -39,13 +39,13 @@
 		<tr>
 			<td width="0%" nowrap="nowrap" valign="top" align="right">{'common.organization'|devblocks_translate|capitalize}:&nbsp;</td>
 			<td width="100%">
-				<input type="text" name="org_name" value="{if !empty($org)}{$org}{else}{$draft->params.org_name}{/if}" style="border:1px solid rgb(180,180,180);padding:2px;width:98%;" placeholder="(optional) Link this ticket to an organization for suggested recipients">
+				<input type="text" name="org_name" value="{if !empty($org)}{$org}{else}{$draft->params.org_name}{/if}" style="border:1px solid rgb(180,180,180);padding:2px;width:98%;" placeholder="{'mail.compose.org_name.placeholder'|devblocks_translate}">
 			</td>
 		</tr>
 		<tr>
 			<td width="0%" nowrap="nowrap" valign="top" align="right"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query="">{'message.header.to'|devblocks_translate|capitalize}</a>:&nbsp;</td>
 			<td width="100%">
-				<input type="text" name="to" id="emailinput{$popup_uniqid}" value="{if !empty($to)}{$to}{else}{$draft->params.to}{/if}" style="border:1px solid rgb(180,180,180);padding:2px;width:98%;" placeholder="These recipients will automatically be included in all future correspondence">
+				<input type="text" name="to" id="emailinput{$popup_uniqid}" value="{if !empty($to)}{$to}{else}{$draft->params.to}{/if}" style="border:1px solid rgb(180,180,180);padding:2px;width:98%;" placeholder="{'mail.compose.to.placeholder'|devblocks_translate}">
 				
 				<div id="compose_suggested{$popup_uniqid}" style="display:none;">
 					<a href="javascript:;" onclick="$(this).closest('div').hide();">x</a>
@@ -57,13 +57,13 @@
 		<tr>
 			<td width="0%" nowrap="nowrap" valign="top" align="right"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query="">{'message.header.cc'|devblocks_translate|capitalize}</a>:&nbsp;</td>
 			<td width="100%">
-				<input type="text" name="cc" style="width:98%;border:1px solid rgb(180,180,180);padding:2px;" value="{$draft->params.cc}" placeholder="These recipients will publicly receive a copy of this message" autocomplete="off">
+				<input type="text" name="cc" style="width:98%;border:1px solid rgb(180,180,180);padding:2px;" value="{$draft->params.cc}" placeholder="{'mail.compose.cc.placeholder'|devblocks_translate}" autocomplete="off">
 			</td>
 		</tr>
 		<tr>
 			<td width="0%" nowrap="nowrap" valign="top" align="right"><a href="javascript:;" class="cerb-recipient-chooser" data-context="{CerberusContexts::CONTEXT_ADDRESS}" data-query="">{'message.header.bcc'|devblocks_translate|capitalize}</a>:&nbsp;</td>
 			<td width="100%">
-				<input type="text" name="bcc" style="width:98%;border:1px solid rgb(180,180,180);padding:2px;" value="{$draft->params.bcc}" placeholder="These recipients will secretly receive a copy of this message" autocomplete="off">
+				<input type="text" name="bcc" style="width:98%;border:1px solid rgb(180,180,180);padding:2px;" value="{$draft->params.bcc}" placeholder="{'mail.compose.bcc.placeholder'|devblocks_translate}" autocomplete="off">
 			</td>
 		</tr>
 		<tr>
@@ -78,21 +78,21 @@
 				
 				<div>
 					<fieldset style="display:inline-block;">
-						<legend>Actions</legend>
+						<legend>{'common.actions'|devblocks_translate|capitalize}</legend>
 						
 						<div id="divComposeInteractions{$popup_uniqid}" style="display:inline-block;">
 						{include file="devblocks:cerberusweb.core::events/interaction/interactions_menu.tpl"}
 						</div>
 						
-						<button id="btnComposeSaveDraft{$popup_uniqid}" class="toolbar-item" type="button"><span class="glyphicons glyphicons-circle-ok"></span> Save Draft</button>
-						<button id="btnComposeInsertSig{$popup_uniqid}" class="toolbar-item" type="button" {if $pref_keyboard_shortcuts}title="(Ctrl+Shift+G)"{/if}"><span class="glyphicons glyphicons-edit"></span> Insert Signature</button>
+						<button id="btnComposeSaveDraft{$popup_uniqid}" class="toolbar-item" type="button"><span class="glyphicons glyphicons-circle-ok"></span> {'mail.save_draft'|devblocks_translate|capitalize}</button>
+						<button id="btnComposeInsertSig{$popup_uniqid}" class="toolbar-item" type="button" {if $pref_keyboard_shortcuts}title="(Ctrl+Shift+G)"{/if}"><span class="glyphicons glyphicons-edit"></span> {'display.reply.insert_sig'|devblocks_translate|capitalize}</button>
 					</fieldset>
 				
 					<fieldset style="display:inline-block;">
 						<legend>{'common.snippets'|devblocks_translate|capitalize}</legend>
 						<div>
 							<div class="cerb-snippet-insert" style="display:inline-block;">
-								<button type="button" class="cerb-chooser-trigger" data-field-name="snippet_id" data-context="{CerberusContexts::CONTEXT_SNIPPET}" data-placeholder="(Ctrl+Shift+I)" data-query="" data-query-required="type:[plaintext,worker]" data-single="true" data-autocomplete="type:[plaintext,worker]"><span class="glyphicons glyphicons-search"></span></button>
+								<button type="button" class="cerb-chooser-trigger" data-field-name="snippet_id" data-context="{CerberusContexts::CONTEXT_SNIPPET}" data-placeholder="{'mail.compose.snippet_insert.placeholder'|devblocks_translate|capitalize}" data-query="" data-query-required="type:[plaintext,worker]" data-single="true" data-autocomplete="type:[plaintext,worker]"><span class="glyphicons glyphicons-search"></span></button>
 								<ul class="bubbles chooser-container"></ul>
 							</div>
 							<button type="button" onclick="var txt = encodeURIComponent($('#divComposeContent{$popup_uniqid}').selection('get')); genericAjaxPopup('add_snippet','c=internal&a=showPeekPopup&context={CerberusContexts::CONTEXT_SNIPPET}&context_id=0&edit=1&text=' + txt,null,false,'50%');"><span class="glyphicons glyphicons-circle-plus"></span></button>
@@ -147,7 +147,7 @@
 	<div>
 		<label>
 		<input type="checkbox" name="options_dont_send" value="1" {if $draft->params.options_dont_send}checked="checked"{/if}> 
-		Start a new conversation without sending a copy of this message to the recipients
+		{'mail.compose.options_dont_send'|devblocks_translate}
 		</label>
 	</div>
 	
@@ -166,7 +166,7 @@
 </fieldset>
 
 <fieldset class="peek">
-	<legend>Assignments</legend>
+	<legend>{'common.assignments'|devblocks_translate|capitalize}</legend>
 	
 	<table cellpadding="0" cellspacing="0" width="100%" border="0">
 		<tr>
@@ -224,16 +224,15 @@
 <div class="status"></div>
 
 <div class="help-box submit-no-recipients" style="display:none;">
-	<h1>You haven't specified any recipients.</h1>
+	<h1>{'mail.compose.info.no_recipient.title'|devblocks_translate}</h1>
 	<p>
-		A new ticket will be created without sending any email.
-		This is normal if you're working on an issue and you plan to add an email address later (e.g. phone call).
+		{'mail.compose.info.no_recipient.warning'|devblocks_translate}
 	</p>
 	<p>
-		If this isn't what you meant to do, add a recipient in the <b>To:</b> field above.
+		{'mail.compose.info.no_recipient.solution'|devblocks_translate}
 	</p>
 	<div>
-		<button type="button" class="submit" title="{if $pref_keyboard_shortcuts}(Ctrl+Shift+Enter){/if}"><span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,180,0);"></span> Create a ticket without recipients</button>
+		<button type="button" class="submit" title="{if $pref_keyboard_shortcuts}(Ctrl+Shift+Enter){/if}"><span class="glyphicons glyphicons-circle-ok" style="color:rgb(0,180,0);"></span> {'mail.compose.create_without_recipients'|devblocks_translate}</button>
 	</div>
 </div>
 
@@ -371,7 +370,7 @@
 		};
 		
 		markitupPlaintextSettings.markupSet.unshift(
-			{ name:'Switch to Markdown', openWith: markitupReplyFunctions.switchToMarkdown, className:'parsedown' },
+			{ name:'{'mail.compose.view.switch_markdown'|devblocks_translate}', openWith: markitupReplyFunctions.switchToMarkdown, className:'parsedown' },
 			{ separator:' ' },
 			{ name:'Preview', key: 'P', call:'preview', className:"preview" }
 		);
@@ -412,7 +411,7 @@
 		};
 		
 		markitupParsedownSettings.markupSet.unshift(
-			{ name:'Switch to Plaintext', openWith: markitupReplyFunctions.switchToPlaintext, className:'plaintext' },
+			{ name:'{'mail.compose.view.switch_plaintext'|devblocks_translate}', openWith: markitupReplyFunctions.switchToPlaintext, className:'plaintext' },
 			{ separator:' ' }
 		);
 		

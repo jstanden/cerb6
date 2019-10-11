@@ -7,7 +7,7 @@
 
 {if !$single}
 <fieldset class="peek">
-	<legend>Include files from these bundles</legend>
+	<legend>{'common.file_bundles.include'|devblocks_translate}</legend>
 	<button type="button" class="chooser-file-bundle"><span class="glyphicons glyphicons-search"></span></button>
 </fieldset>
 {/if}

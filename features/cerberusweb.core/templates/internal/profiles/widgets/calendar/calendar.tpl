@@ -13,7 +13,7 @@
 
 	<div style="float:right;">
 		<button type="button" onclick="genericAjaxGet($(this).closest('div.cerb-profile-widget--content'), 'c=profiles&a=handleProfileWidgetAction&widget_id={$widget->id}&action=showCalendarTab&id={$calendar->id}&month={$calendar_properties.prev_month}&year={$calendar_properties.prev_year}');"><span class="glyphicons glyphicons-chevron-left"></span></button>
-		<button type="button" onclick="genericAjaxGet($(this).closest('div.cerb-profile-widget--content'), 'c=profiles&a=handleProfileWidgetAction&widget_id={$widget->id}&action=showCalendarTab&id={$calendar->id}&month=&year=');">Today</button>
+		<button type="button" onclick="genericAjaxGet($(this).closest('div.cerb-profile-widget--content'), 'c=profiles&a=handleProfileWidgetAction&widget_id={$widget->id}&action=showCalendarTab&id={$calendar->id}&month=&year=');">{'common.today'|devblocks_translate|capitalize}</button>
 		<button type="button" onclick="genericAjaxGet($(this).closest('div.cerb-profile-widget--content'), 'c=profiles&a=handleProfileWidgetAction&widget_id={$widget->id}&action=showCalendarTab&id={$calendar->id}&month={$calendar_properties.next_month}&year={$calendar_properties.next_year}');"><span class="glyphicons glyphicons-chevron-right"></span></button>
 	</div>
 	

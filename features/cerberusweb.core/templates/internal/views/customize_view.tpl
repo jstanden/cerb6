@@ -28,7 +28,7 @@
 
 {if $is_custom}
 <fieldset class="peek peek-noborder black" style="margin-bottom:0;">
-	<legend>Restrict the worklist results using this quick search:</legend>
+	<legend>{'worklist.restrict_result'|devblocks_translate}:</legend>
 	
 	<div id="viewCustomReqQuickSearch{$view->id}" style="margin:5px 0px 0px 0px;">
 		<textarea name="params_required_query" style="width:100%;padding:5px;" data-editor-mode="ace/mode/cerb_query">{$workspace_list->params_required_query}</textarea>
@@ -62,7 +62,7 @@
 		<input type="text" name="view_options[header_color]" value="{$workspace_list->options.header_color|default:'#6A87DB'}" class="color-picker">
 	</div>
 	<div style="margin-top:1em;">
-		<label><input type="checkbox" name="view_options[disable_sorting]" value="1" {if $view->options.disable_sorting}checked="checked"{/if}> Prevent workers from changing the sort column</label>
+		<label><input type="checkbox" name="view_options[disable_sorting]" value="1" {if $view->options.disable_sorting}checked="checked"{/if}> {'worklist.prevent_changing_order'|devblocks_translate}</label>
 	</div>
 	{/if}
 	

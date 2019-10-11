@@ -56,7 +56,7 @@
 <tr class="week">
 	{foreach from=$week item=day name=days}
 		{$is_today = $calendar_properties.today == $day.timestamp}
-		<td class="{if $is_today}today{/if}{if $day.is_padding} inactive{/if}{if $smarty.foreach.days.last} cellborder_r{/if}{if $smarty.foreach.weeks.last} cellborder_b{/if}">
+		<td class="{if $is_today}{'common.today'|devblocks_translate|capitalize}{/if}{if $day.is_padding} inactive{/if}{if $smarty.foreach.days.last} cellborder_r{/if}{if $smarty.foreach.weeks.last} cellborder_b{/if}">
 			<div class="day_header">
 				{if $is_today}
 				<a href="javascript:;" onclick="">Today, {$calendar_properties.today|devblocks_date:"M d"}</a>

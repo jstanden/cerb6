@@ -1128,6 +1128,7 @@ abstract class Extension_DevblocksContext extends DevblocksExtension implements 
 	 * @return C4_AbstractView
 	 */
 	public function getSearchView($view_id=null) {
+		$translate = DevblocksPlatform::getTranslationService();
 		if(empty($view_id)) {
 			$view_id = sprintf("search_%s",
 				str_replace('.','_',DevblocksPlatform::strToPermalink($this->id,'_'))
@@ -1139,7 +1140,7 @@ abstract class Extension_DevblocksContext extends DevblocksExtension implements 
 				return;
 		}
 		
-		$view->name = 'Search Results';
+		$view->name = $translate->_('common.search_results');
 		$view->is_ephemeral = false;
 
 		return $view;

@@ -7,3 +7,5 @@
 /tags
 /vendor/
 storage/logo
+/install/
+framework.config.php
